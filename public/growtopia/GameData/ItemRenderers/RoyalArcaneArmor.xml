@@ -184,7 +184,7 @@
 					<Set name="lifeTime">0.4</Set>
 				</Particle>
 			</ParticleSystem>
-			<ParticleSystem name="punch_continue_particle_trial">
+			<ParticleSystem name="punch_continue_particle_trail">
 				<Emitter attachment="targetPos">
 					<Set name="offset">-4, 12</Set>
 					<Set name="lifeTime">0</Set>
@@ -243,7 +243,7 @@
 			<AvatarTransform class="Face">
 				<Set name="face">MAD</Set>
 			</AvatarTransform>
-			<ParticleSystemUpdate name="punch_continue_particle_trial" onAction="PUNCH"/>
+			<ParticleSystemUpdate name="punch_continue_particle_trail" onAction="PUNCH"/>
 		</OnPunchUpdate>
 		<RenderSittingInTheater>
 			<Group>
@@ -286,13 +286,13 @@
 			</Group>
 		</RenderBehind>
 		<OnPunchBegin>
-			<ParticleSystemOff name="punch_continue_particle_trial" />
+			<ParticleSystemOff name="punch_continue_particle_trail" />
 			<ParticleSystemOff name="punch_continue_particle" />
 			<ParticleSystemOff name="punch_end_particle" />
 			<ParticleSystemUpdate name="punch_start_particle" />
 		</OnPunchBegin>
 		<OnPunchStop>
-			<ParticleSystemOff name="punch_continue_particle_trial" />
+			<ParticleSystemOff name="punch_continue_particle_trail" />
 			<ParticleSystemOff name="punch_continue_particle" />
 			<ParticleSystemOff name="punch_start_particle" />
 			<ParticleSystemUpdate name="punch_end_particle" />
@@ -319,7 +319,7 @@
 				<IsRenderMod>RENDER_MOD_MINI_YOU</IsRenderMod>
 			</StopIf>
 			<ParticleSystemRender name="punch_start_particle" />
-			<ParticleSystemRender name="punch_continue_particle_trial" onAction="PUNCH"/>
+			<ParticleSystemRender name="punch_continue_particle_trail" onAction="PUNCH"/>
 			<ParticleSystemRender name="punch_continue_particle" onAction="PUNCH"/>
 			<ParticleSystemRender name="punch_end_particle" onState="Action.None" />
 			<ParticleSystemRender name="hit_particle_circle" />
@@ -338,7 +338,7 @@
 		</OnDamagedTile>
 		<SwitchOffClothingParticles>
 			<ParticleSystemOff name="punch_start_particle" />
-			<ParticleSystemOff name="punch_continue_particle_trial" />
+			<ParticleSystemOff name="punch_continue_particle_trail" />
 			<ParticleSystemOff name="punch_continue_particle" />
 			<ParticleSystemOff name="punch_end_particle" />
 			<ParticleSystemOff name="hit_particle_circle" />

@@ -23,7 +23,7 @@
 			</SpriteAnimation>
 		</Animations>
 		<ParticleSystems>
-			<ParticleSystem name="TrialParticle">
+			<ParticleSystem name="TrailParticle">
 				<Emitter>
 					<Set name="offset">0, -36</Set>
 					<Set name="infParticles">true</Set>
@@ -65,10 +65,10 @@
 		</RenderChestBackItem>
 		<RenderChestItem>
 			<SpriteRender name="chestForegroundSprite" blend="PREMULTIPLIED_ALPHA" alignment="DOWN_CENTER" />
-			<ParticleSystemRender name="TrialParticle"/>
+			<ParticleSystemRender name="TrailParticle"/>
 		</RenderChestItem>
 		<AddClothingParticles>
-			<ParticleSystemUpdate name="TrialParticle"/>
+			<ParticleSystemUpdate name="TrailParticle"/>
 		</AddClothingParticles>
 	</RenderRules>
 </ItemRenderer>
